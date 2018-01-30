@@ -1,0 +1,18 @@
+<h2> New Manager </h2>
+
+<form (ngSubmit)="saveManager(newManger)" >
+	
+	<label for="name"> name: </label>
+	<input name="name" [(ngModel)]="newManger.name">
+
+	<label for="email"> email: </label>
+	<input name="email" [(ngModel)]="newManger.email">
+
+	<label for="office_number"> office number: </label>
+	<input name="office_number" [(ngModel)]="newManger.office_number">
+
+	<label for="cell_phone_number"> cell phone number: </label>
+	<input name="cell_phone_number" [(ngModel)]="newManger.cell_phone_number">
+
+	<input type="submit" value="Create" >
+</form>
