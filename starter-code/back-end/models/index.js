@@ -1,7 +1,7 @@
 //Connect
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('postgres://sassankermani@localhost:5432/tunr_models');
+var sequelize = new Sequelize('postgres://chadkeeven@localhost:5432/tunr_models');
 
 //Export models and Sequelize for seed and dbSetup
 module.exports.Sequelize = Sequelize;

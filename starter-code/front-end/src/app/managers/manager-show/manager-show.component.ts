@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {ManagersService} from "../managers.service";
 
 @Component({
   selector: 'app-manager-show',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerShowComponent implements OnInit {
 
-  constructor() { }
+  oneManager;
+
+  constructor(
+    private route : ActivatedRoute,
+    private managersService: ManagersService
+  ) { }
 
   ngOnInit() {
+    this.route.params.forEach( param => {
+      this.managersService.getOneManager(param.id)
+        .subscribe(response => {
+          console.log(response.json());
+          this.oneManager = response.json();
+        });
+    });
   }
 
 }

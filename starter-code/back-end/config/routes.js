@@ -4,7 +4,7 @@ var artistsController = require('../controllers/artists.js');
 var managersController = require('../controllers/managers.js');
 
 //Artist Routes
-  
+
 // index
 router.get('/api/artists', artistsController.index);
 
@@ -24,6 +24,15 @@ router.delete('/api/artists/:id', artistsController.destroy);
 
 // index
 router.get('/api/managers', managersController.index);
+
+// create
+router.post('/api/managers', managersController.create);
+
+// show
+router.get('/api/managers/:id', managersController.show);
+
+// update
+router.put('/api/managers/:id', managersController.update);
 
 //Song Routes
 

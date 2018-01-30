@@ -1,18 +1,18 @@
 <h2> Edit Manager </h2>
 
-<form (ngSubmit)="updateManger(updatedManger)" >
-	
+<form (ngSubmit)="updateManager(updatedManager)" >
+
 	<label for="name"> name: </label>
-	<input name="name" [(ngModel)]="updatedManger.name">
+	<input name="name" [(ngModel)]="updatedManager.name">
 
 	<label for="email"> email: </label>
-	<input name="email" [(ngModel)]="updatedManger.email">
+	<input name="email" [(ngModel)]="updatedManager.email">
 
 	<label for="office_number"> office number: </label>
-	<input name="office_number" [(ngModel)]="updatedManger.office_number">
+	<input name="office_number" [(ngModel)]="updatedManager.office_number">
 
 	<label for="cell_phone_number"> cell phone number: </label>
-	<input name="cell_phone_number" [(ngModel)]="updatedManger.cell_phone_number">
+	<input name="cell_phone_number" [(ngModel)]="updatedManager.cell_phone_number">
 
 	<input type="submit" value="Update" >
 </form>
